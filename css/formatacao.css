@@ -1,0 +1,58 @@
+body {
+    
+    background-image: url("fundo.jpg");
+    text-align: center;
+}
+button{
+  
+  font-weight: blue;
+  color:royalblue;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button#pare{
+  position: relative;
+  left: -11%;
+
+}
+button#animacao{
+  position: relative;
+  left: -12%;
+}
+
+button#limpe{
+  position: relative;
+  left: -10%;
+}
+h1{
+  color: blue;
+  position: relative;
+  left: -10%;
+
+}
+
+footer{
+  position: absolute;
+  top: 93%;
+  font-size: 20px;
+  left: 36%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.opcoes{
+  position: absolute;
+  left: 62%;
+  top: 200px;
+  font-size: 18px;
+}
+h3#regras{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: absolute;
+  left: 75%;
+  font-size: 25px;
+}
+button#pare{
+  display: none;
+}
