@@ -1,5 +1,3 @@
-// código "strict"
-"use strict";
       var tamanhoCelula = 20;  
       var corCelulaViva = "red";  
       var corCelulaMorta = "green";  
@@ -70,7 +68,6 @@
         }
       };
       
-      
       var tabuleiro = new Tabuleiro(fileirasTabuleiro, colunasTabuleiro);
       
       canvas.addEventListener('click', function(event) {
@@ -108,13 +105,11 @@
         }
         return vizinhasVivas;
       };
-      // determinar oque acontece com uma célula na proxima geração.
       Tabuleiro.prototype.celulaProximaGeracao = function(fileira, coluna) {
         var vizinhasVivas = this.contarVizinhasVivas(fileira, coluna);
         var celula = this.celulas[fileira][coluna];
         var vivaNaProximaGeracao;
         
-        //representação de uma célula viva.
         if (this.celulas[fileira][coluna].viva) {
           
           if (vizinhasVivas == 3) {
@@ -123,7 +118,6 @@
             vivaNaProximaGeracao = false;
           }
         } else {
-          //  Uma celula morta com exatamente 2 vizinhas vivas, nascerá na próxima geração.
           if (vizinhasVivas == 2) {
             vivaNaProximaGeracao = true;
           } else {
@@ -184,16 +178,12 @@
         $("#animacao").removeAttr("disabled");
         $("#geracao").removeAttr("disabled");
       });
-        
+      
       $("#limpe").click(function () {
         $("#pare").click();  
         tabuleiro.limpeTabuleiro();
       });
              
-
-      
-      
-      
       Tabuleiro.prototype.darVida = function(fileira, coluna) {
         this.celulas[fileira][coluna].viva = true;
       };
@@ -202,6 +192,3 @@
           this.darVida.apply(this, point);
         }, this);
       };
-      tabuleiro.criarCriatura(gliderGun);
-      tabuleiro.desenhe();
-      $("#animacao").click();
